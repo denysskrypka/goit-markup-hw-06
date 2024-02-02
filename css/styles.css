@@ -17,6 +17,7 @@ ol {
 
 img {
   display: block;
+  width: 100%;
 }
 
 .visually-hidden {
@@ -339,12 +340,24 @@ ul {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/InscriptionBackground.jpg);
+    url(../images/InscriptionBackground-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   max-width: 320px;
   text-transform: capitalize;
+}
+
+@media screen and(min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .first-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/InscriptionBackground-mobile-2x.jpg);
+  }
 }
 
 .inscription-title {
@@ -379,39 +392,6 @@ ul {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) {
-  .first-section {
-    padding-top: 112px;
-    padding-bottom: 112px;
-    min-width: 768px;
-    height: 436px;
-  }
-  .inscription-title {
-    font-size: 56px;
-    line-height: 1.07;
-    max-width: 496px;
-  }
-  .inscription-button {
-    margin-top: 36px;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .first-section {
-    padding-top: 188px;
-    padding-bottom: 188px;
-    min-width: 1158px;
-    height: 600px;
-  }
-  .inscription-button {
-    margin-top: 48px;
-  }
-  .inscription-button:hover,
-  .inscription-button:focus {
-    background-color: #404bbf;
-  }
-}
-
 /* Advantages section */
 
 .second-section {
@@ -419,6 +399,10 @@ ul {
 }
 
 .advantages-container {
+  gap: 72px;
+}
+
+.advantages-list {
   display: flex;
   flex-wrap: wrap;
   gap: 72px;
@@ -442,6 +426,7 @@ ul {
   background-color: #f4f4fd;
   border-radius: 4px;
   margin-bottom: 8px;
+  border: 1px solid #8e8f99;
 }
 
 .advantages-list-title {
@@ -462,41 +447,6 @@ ul {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 72px;
-}
-
-@media screen and (min-width: 768px) {
-  .second-section {
-    padding-top: 96px;
-    padding-bottom: 96px;
-  }
-  .advantages-list {
-    display: flex;
-    row-gap: 72px;
-    flex-wrap: wrap;
-  }
-
-  .advantages-list-item {
-    flex-basis: calc((100% - 12px) / 2);
-  }
-
-  .advantages-list-title {
-    text-align: left;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .second-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-  .advantages-icon-container {
-    display: flex;
-  }
-  .advantages-list-title {
-    font-size: 20px;
-    font-weight: 500;
-  }
 }
 
 /* Team info section */
@@ -1054,4 +1004,265 @@ ul {
 .modal-form-button:hover,
 .modal-form-button:focus {
   background-color: #404bbf;
+}
+
+/* Media */
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .logo {
+    margin-right: 76px;
+  }
+
+  .nav-list {
+    display: flex;
+  }
+
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .address-link {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+  }
+
+  .open-menu-btn {
+    display: none;
+  }
+
+  .first-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/InscriptionBackground-tablet.jpg);
+    padding: 112px 0;
+    min-width: 768px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .first-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/InscriptionBackground-tablet-2x.jpg);
+    }
+  }
+
+  .inscription-title {
+    font-size: 56px;
+    line-height: 1.07;
+    text-transform: none;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
+
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .advantages-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .advantages-list-title {
+    text-align: left;
+  }
+
+  .third-section {
+    padding: 96px 0;
+  }
+
+  .team-member-list {
+    gap: 64px 24px;
+  }
+
+  .team-member-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .portfolio-list {
+    gap: 72px 24px;
+  }
+
+  .portfolio-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding-left: 108px;
+    padding-right: 164px;
+  }
+
+  .footer-logo-text {
+    margin-right: 24px;
+  }
+
+  .footer-logo {
+    justify-content: flex-start;
+  }
+
+  .footer-links-text {
+    justify-content: flex-start;
+  }
+
+  .footer-subscribe-text {
+    justify-content: flex-start;
+  }
+
+  .footer-subscribe-label {
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+
+  .modal-form {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .address-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .address-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  .first-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/InscriptionBackground-desctop.jpg);
+    padding: 188px 0;
+    max-width: 1440px;
+  }
+
+  @media screen and(min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .first-section {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/InscriptionBackground-desctop.jpg);
+    }
+  }
+
+  .inscription-title {
+    margin-bottom: 48px;
+  }
+
+  .second-section {
+    padding: 120px 0;
+  }
+
+  .advantages-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .advantages-icon-container {
+    display: flex;
+  }
+
+  .advantages-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .advantages-list-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .advantages-list-text {
+    font-weight: 400;
+  }
+
+  .third-section {
+    padding: 120px 0;
+  }
+
+  .team-member-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .fourth-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .portfolio-list {
+    gap: 48px 24px;
+  }
+
+  .portfolio-list-item {
+    width: calc((100% - 48px) / 3);
+  }
+
+  .footer-section {
+    padding: 100px 0;
+  }
+
+  .footer {
+    flex-wrap: nowrap;
+  }
+
+  .footer-logo-text {
+    margin-left: 0;
+    margin-right: 120px;
+    margin-bottom: 0;
+  }
+
+  .footer-links {
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+
+  .footer-subscribe {
+    margin-left: 0;
+  }
 }
